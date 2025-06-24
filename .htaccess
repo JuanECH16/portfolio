@@ -1,0 +1,30 @@
+# Deshabilitar la generación de listados de directorios
+Options -Indexes
+
+# Deshabilitar la negociación de contenido basada en el nombre del archivo
+Options -MultiViews
+
+RewriteEngine On
+
+# Reescribir URL amigables
+RewriteRule ^formulario/(.*)$ formulario/$1 [L]
+
+# Si el archivo no existe, redirige a formulario/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^$ formulario/index.html [QSA,L]
+
+# Permitir solo los métodos GET y POST
+<Limit GET POST>
+    Require all granted
+</Limit>
+
+# Denegar todos los demás métodos
+<LimitExcept GET POST>
+    Require all denied
+</LimitExcept>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
