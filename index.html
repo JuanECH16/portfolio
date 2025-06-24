@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="icon" type="image/x-icon" href="resources/img/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="resources/img/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Portafolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about_me">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button type="button" class="btn" id="mail" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="Abrir notificaciones" data-action="mail">
+                                <i class="bi bi-envelope-fill"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn" id="mode" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="Cambiar modo" data-action="mode">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid p-5" data-bs-spy="scroll" data-bs-target="#navbar">
+        <section id="about_me" class="my-5 py-5 scroll-item">
+            <div class="row align-items-center scroll-item">
+                <div class="col-12 col-md-5 text-center">
+                    <img src="resources/img/avatar.webp" class="card-img-top img-fluid" alt="Proyecto 1">
+                </div>
+                <div class="col-12 col-md-7 text-center">
+                    <div class="card-body mt-5" style="text-wrap: balance;">
+                        <h1 class="card-title"><code>Hola!</code> Soy Juan Cruz</h1>
+                        <p class="card-text my-2">Soy un desarrollador apasionado por la tecnología y el diseño. Me
+                            encanta crear soluciones innovadoras que mejoren la experiencia del usuario. <br> Soy un
+                            gran fanático de los videojuegos y me gusta explorar nuevas plataformas y tecnologías para
+                            mejorar mi habilidad en el campo.</p>
+                        <br>
+                        <a href="#" class="btn" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Github"><i class="bi bi-github"></i></a>
+                        <a href="#" class="btn" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Correo"><i class="bi bi-envelope-at-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="scroll-item">
+            <div class="row align-items-stretch scroll-item">
+                <div class="col-12 my-4 text-center">
+                    <h2>Proyectos</h2>
+                    <p class="lead">Aquí puedes ver algunos de mis pro yectos más recientes.</p>
+                </div>
+            </div>
+            <div class="card mb-4 scroll-item">
+                <div class="row align-items-stretch">
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="resources/img/project1.jpg" class="card-img-top img-fluid" alt="Proyecto 1">
+                    </div>
+                    <div class="col-12 col-md-6 text-center">
+                        <div class="card-body">
+                            <p class="card-text">Descripción breve del proyecto 1. Aquí puedes hablar sobre las
+                                tecnologías
+                                utilizadas y el objetivo del proyecto.</p>
+                            <a href="#" class="btn">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 scroll-item">
+                <div class="row align-items-stretch">
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="resources/img/project1.jpg" class="card-img-top img-fluid fs-4" alt="Proyecto 1">
+                    </div>
+                    <div class="col-12 col-md-6 text-center">
+                        <div class="card-body">
+                            <p class="card-text">Descripción breve del proyecto 1. Aquí puedes hablar sobre las
+                                tecnologías
+                                utilizadas y el objetivo del proyecto.</p>
+                            <a href="#" class="btn">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de notificaciones -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby=" ModalLabel" aria-hidden="true"
+        aria-describedby="notificationModalLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="notificationModalLabel">Mensajes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <label class="form-label fs-4">Solicitudes</label>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover" id="notificationTable">
+                            <thead id="notification_head">
+                                <!-- Aquí se llenarán los encabezados de la tabla -->
+                            </thead>
+                            <tbody class="table-group-divider" id="notification_table">
+                                <!-- Aquí se llenarán los datos de los estudiantes -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row w-100 mb-2">
+                        <div class="col-12 text-center">
+                            <div class="pagination" id="pagination_notification"></div>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-12 text-center">
+                            <input type="button" class="form-control fs-6" data-bs-dismiss="modal" value="Cerrar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/code.js"></script>
+</body>
+
+</html>
