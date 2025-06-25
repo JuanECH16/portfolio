@@ -11,7 +11,9 @@
 }
 
 html {
-  scroll-padding-top: 100px !important;
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable !important;
+  scroll-padding-top: 150px !important;
 }
 
 body,
@@ -60,12 +62,16 @@ code,
   color: var(--dark-code) !important;
 }
 
-section {
-  border-radius: 0.5rem !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  max-width: 70% !important;
-  width: 100% !important;
+a:hover:not(.nav-link),
+.btn:hover {
+  background-color: var(--light-code) !important;
+  color: var(--light-bg) !important;
+}
+
+.dark-mode a:hover:not(.nav-link),
+.dark-mode .btn:hover {
+  background-color: var(--dark-code) !important;
+  color: var(--dark-bg) !important;
 }
 
 .scroll-item {
@@ -77,6 +83,31 @@ section {
 .scroll-item.visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
+}
+
+section {
+  border-radius: 0.5rem !important;
+  max-width: 70% !important;
+  width: 100% !important;
+  margin: 8rem auto !important;
+  /* Y/X */
+}
+
+#technologies a {
+  height: 100% !important;
+  width: 50% !important;
+  align-content: center !important;
+  border: 0.1rem solid !important;
+}
+
+#technologies i:not(.bi-bootstrap) {
+  font-size: 2.5rem !important;
+  /* background-color: red !important; */
+}
+
+.bi-bootstrap {
+  font-size: 1.7rem !important;
+  /* background-color: red !important; */
 }
 
 #mode {
