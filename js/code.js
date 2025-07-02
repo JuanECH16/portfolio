@@ -48,8 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 openModal('notificationModal');
             }
             if (action === 'mode') {
-                toggleBodyColor();
-                if (body.classList.contains("dark-mode")){
+                // Cambia el modo oscuro/claro
+                body.classList.toggle("dark-mode");
+                
+                if (prefersDark){
                     clickedButton.innerHTML = '<i class="bi bi-sun-fill"></i> Modo Claro';
                 } else {
                     clickedButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i> Modo Oscuro';
@@ -58,12 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 });
-
-// Función para alternar el color del cuerpo entre claro y oscuro
-function toggleBodyColor() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-}
 
 // Función para abrir el modal
 function openModal(modalID) {

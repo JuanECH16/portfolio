@@ -1,19 +1,19 @@
 :root {
   color-scheme: light dark !important;
 
-  --light-bg: ghostwhite !important;
-  --light-color: darkslategray !important;
-  --light-code: tomato !important;
-
-  --dark-bg: darkslategray !important;
-  --dark-color: ghostwhite !important;
-  --dark-code: gold !important;
+  --light-bg: ghostwhite;
+  --light-color: darkslategray;
+  --light-code: tomato;
+  --dark-bg: darkslategray;
+  --dark-color: ghostwhite;
+  --dark-code: gold;
 }
 
 html {
   overflow-y: scroll !important;
-  scrollbar-gutter: stable !important;
-  scroll-padding-top: 150px !important;
+  scrollbar-gutter: stable;
+  scroll-padding-top: 200px !important;
+  /* Necesario para navbar fijo */
 }
 
 body,
@@ -93,21 +93,45 @@ section {
   /* Y/X */
 }
 
-#technologies a {
-  height: 100% !important;
-  width: 50% !important;
-  align-content: center !important;
-  border: 0.1rem solid !important;
+#about_me i {
+  font-size: 1.5rem;
+  display: inline-block;
+  line-height: 1;
 }
 
-#technologies i:not(.bi-bootstrap) {
-  font-size: 2.5rem !important;
-  /* background-color: red !important; */
+.card-body {
+  text-wrap: balance;
+}
+
+#technologies a {
+  height: 100% !important;
+  width: 75% !important;
+  align-content: center !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+#technologies i {
+  font-size: 2.5rem;
+  display: inline-block;
+  /* Para poder aplicar transform si es necesario */
+  vertical-align: middle;
+  /* Para centrar verticalmente */
+  line-height: 1;
+  /* Para controlar el espaciado */
+}
+
+#technologies svg {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .bi-bootstrap {
-  font-size: 1.7rem !important;
-  /* background-color: red !important; */
+  font-size: 1.7rem;
 }
 
 #mode {
