@@ -57,6 +57,35 @@ document.addEventListener("DOMContentLoaded", () => {
                     clickedButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i> Modo Oscuro';
                 }
             }
+            if (action === 'emailInput') {
+                const emailInput = document.getElementById('emailInput');
+                if (emailInput) {
+                    // Usa la Clipboard API moderna
+                    navigator.clipboard.writeText(emailInput.value).then(() => {
+                        const tooltip = bootstrap.Tooltip.getInstance(clickedButton);
+                        if (tooltip) {
+                            tooltip.setContent({ '.tooltip-inner': 'Correo copiado al portapapeles' });
+                            tooltip.show();
+                        }
+                    }).catch(err => {
+                        console.error('Error al copiar al portapapeles:', err);
+                        // Fallback para navegadores antiguos
+                        emailInput.select();
+                        try {
+                            document.execCommand('copy');
+                            const tooltip = bootstrap.Tooltip.getInstance(clickedButton);
+                            if (tooltip) {
+                                tooltip.setContent({ '.tooltip-inner': 'Correo copiado al portapapeles' });
+                                tooltip.show();
+                            }
+                        } catch (fallbackErr) {
+                            console.error('Error en el fallback:', fallbackErr);
+                        }
+                    });
+                } else {
+                    console.error("No se encontró el input de correo electrónico.");
+                }
+            }
         }
     })
 });

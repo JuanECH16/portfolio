@@ -13,7 +13,6 @@ html {
   overflow-y: scroll !important;
   scrollbar-gutter: stable;
   scroll-padding-top: 200px !important;
-  /* Necesario para navbar fijo */
 }
 
 body,
@@ -22,7 +21,8 @@ body,
 .modal-content,
 .dropdown-menu,
 section,
-img {
+img,
+input {
   background-color: var(--light-bg) !important;
   color: var(--light-color) !important;
   transition: all 0.8s ease-in-out !important;
@@ -34,7 +34,8 @@ img {
 .dark-mode .modal-content,
 .dark-mode .dropdown-menu,
 .dark-mode section,
-.dark-mode img {
+.dark-mode img,
+.dark-mode input {
   background-color: var(--dark-bg) !important;
   color: var(--dark-color) !important;
   transition: all 0.8s ease-in-out !important;
@@ -47,7 +48,14 @@ img {
 .navbar .navbar-brand:focus,
 .navbar .navbar-brand:hover,
 code,
-.btn {
+.btn,
+.card-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--light-code) !important;
 }
 
@@ -58,7 +66,14 @@ code,
 .dark-mode .navbar .navbar-brand:focus,
 .dark-mode .navbar .navbar-brand:hover,
 .dark-mode code,
-.dark-mode .btn {
+.dark-mode .btn,
+.dark-mode .card-title,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
   color: var(--dark-code) !important;
 }
 
@@ -72,6 +87,23 @@ a:hover:not(.nav-link),
 .dark-mode .btn:hover {
   background-color: var(--dark-code) !important;
   color: var(--dark-bg) !important;
+}
+
+#technologies .border-end {
+  border-right: 1px solid var(--light-color) !important;  
+}
+
+.dark-mode #technologies .border-end {
+  border-right: 1px solid var(--dark-color) !important;
+}
+
+.card-title { 
+  border-bottom: 1px solid var(--light-color) !important;
+  padding-bottom: 0.5rem !important;
+}
+.dark-mode .card-title {
+  border-bottom: 1px solid var(--dark-color) !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .scroll-item {
@@ -89,11 +121,11 @@ section {
   border-radius: 0.5rem !important;
   max-width: 70% !important;
   width: 100% !important;
-  margin: 8rem auto !important;
+  margin: 9rem auto !important;
   /* Y/X */
 }
 
-#about_me i {
+#about_me i, #projects i {
   font-size: 1.5rem;
   display: inline-block;
   line-height: 1;
@@ -105,7 +137,7 @@ section {
 
 #technologies a {
   height: 100% !important;
-  width: 75% !important;
+  width: 100% !important;
   align-content: center !important;
   font-size: 1rem !important;
   display: flex !important;
@@ -118,11 +150,8 @@ section {
 #technologies i {
   font-size: 2.5rem;
   display: inline-block;
-  /* Para poder aplicar transform si es necesario */
   vertical-align: middle;
-  /* Para centrar verticalmente */
   line-height: 1;
-  /* Para controlar el espaciado */
 }
 
 #technologies svg {
