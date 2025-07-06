@@ -12,7 +12,7 @@
 html {
   overflow-y: scroll !important;
   scrollbar-gutter: stable;
-  scroll-padding-top: 200px !important;
+  scroll-padding-top: 180px !important;
 }
 
 body,
@@ -77,13 +77,13 @@ h6 {
   color: var(--dark-code) !important;
 }
 
-a:hover:not(.nav-link),
+a:hover:not(.nav-link):not(.navbar-brand),
 .btn:hover {
   background-color: var(--light-code) !important;
   color: var(--light-bg) !important;
 }
 
-.dark-mode a:hover:not(.nav-link),
+.dark-mode a:hover:not(.nav-link):not(.navbar-brand),
 .dark-mode .btn:hover {
   background-color: var(--dark-code) !important;
   color: var(--dark-bg) !important;
