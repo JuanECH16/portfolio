@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (action === 'mode') {
                 // Cambia el modo oscuro/claro
                 body.classList.toggle("dark-mode");
-                
-                if (prefersDark){
+
+                if (prefersDark) {
                     clickedButton.innerHTML = '<i class="bi bi-sun-fill"></i> Modo Claro';
                 } else {
                     clickedButton.innerHTML = '<i class="bi bi-moon-stars-fill"></i> Modo Oscuro';
@@ -88,6 +88,36 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     })
+
+    document.getElementById('contactForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        if (form.checkValidity()) {
+            
+            // Aquí puedes manejar el envío del formulario, por ejemplo, enviarlo a un servidor
+            console.log("Formulario enviado correctamente.");
+            
+            // Mostrar un mensaje de éxito o redirigir al usuario
+            const successMessage = document.createElement('div');
+            successMessage.className = 'alert alert-success mt-3';
+            successMessage.textContent = 'Formulario enviado correctamente. ¡Gracias por tu mensaje!';
+            form.appendChild(successMessage);
+
+            setTimeout(() => {
+                successMessage.style.transition = 'opacity 0.5s ease';
+                successMessage.style.opacity = '0'; // Desvanecer el mensaje
+                setTimeout(() => {
+                    successMessage.remove(); // Elimina el mensaje después de desvanecerlo
+                }, 500);
+            }, 3000);
+
+            form.classList.remove('was-validated');
+            form.reset();
+        } else {
+            form.classList.add('was-validated');
+        }
+    });
 });
 
 // Función para abrir el modal

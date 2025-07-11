@@ -1,3 +1,5 @@
+/* Start global styles */
+
 :root {
   color-scheme: light dark !important;
 
@@ -27,7 +29,8 @@ body,
 .dropdown-menu,
 section,
 img,
-input {
+input,
+textarea {
   background-color: var(--light-bg) !important;
   color: var(--light-color) !important;
   transition: all 0.8s ease-in-out !important;
@@ -40,7 +43,8 @@ input {
 .dark-mode .dropdown-menu,
 .dark-mode section,
 .dark-mode img,
-.dark-mode input {
+.dark-mode input,
+.dark-mode textarea {
   background-color: var(--dark-bg) !important;
   color: var(--dark-color) !important;
   transition: all 0.8s ease-in-out !important;
@@ -95,20 +99,49 @@ a:hover:not(.nav-link):not(.navbar-brand),
 }
 
 #technologies .border-end {
-  border-right: 1px solid var(--light-color) !important;  
+  border-right: 1px solid var(--light-color) !important;
 }
 
 .dark-mode #technologies .border-end {
   border-right: 1px solid var(--dark-color) !important;
 }
 
-.card-title { 
+.card-title {
   border-bottom: 1px solid var(--light-color) !important;
-  padding-bottom: 0.5rem !important;
 }
+
 .dark-mode .card-title {
   border-bottom: 1px solid var(--dark-color) !important;
-  padding-bottom: 0.5rem !important;
+}
+
+.form-control:focus {
+  border-color: var(--light-code) !important;
+  box-shadow: 0 0 0 0.2rem #2f4f4f15 !important;
+}
+
+.dark-mode .form-control:focus {
+  border-color: var(--dark-code) !important;
+  box-shadow: 0 0 0 0.2rem rgba(228, 207, 87, 0.25) !important;
+}
+
+/* End global styles */
+
+section {
+  border-radius: 0.5rem !important;
+  max-width: 70% !important;
+  width: 100% !important;
+  margin: 9rem auto !important;
+  /* Y/X */
+}
+
+textarea {
+  resize: none !important;
+  height: 10rem !important;
+}
+
+img {
+  border: 0.25rem solid !important;
+  border-radius: 0.5rem !important;
 }
 
 .scroll-item {
@@ -122,15 +155,8 @@ a:hover:not(.nav-link):not(.navbar-brand),
   transform: translateY(0) !important;
 }
 
-section {
-  border-radius: 0.5rem !important;
-  max-width: 70% !important;
-  width: 100% !important;
-  margin: 9rem auto !important;
-  /* Y/X */
-}
-
-#about_me i, #projects i {
+#about_me i,
+#projects i {
   font-size: 1.5rem;
   display: inline-block;
   line-height: 1;
@@ -138,6 +164,10 @@ section {
 
 .card-body {
   text-wrap: balance;
+}
+
+.card-title {
+  padding-bottom: 0.5rem !important;
 }
 
 #technologies a {
@@ -172,11 +202,6 @@ section {
   width: 8rem !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-img {
-  border: 0.25rem solid !important;
-  border-radius: 0.5rem !important;
 }
 
 @media screen and (max-width: 600px) {
