@@ -171,37 +171,65 @@ img {
 }
 
 #technologies a {
-  height: 100% !important;
+  min-height: 100px !important;
+  height: auto !important;
   width: 100% !important;
-  align-content: center !important;
-  font-size: 1rem !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
+  font-size: 1rem !important;
+  padding: 0.75rem 0.5rem !important;
+  gap: 0.5rem !important;
 }
 
-#technologies i {
-  font-size: 2.5rem;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
-}
-
+#technologies i,
 #technologies svg {
-  height: 2.5rem;
-  width: 2.5rem;
+  font-size: 2.5rem !important;
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  vertical-align: middle !important;
 }
 
-.bi-bootstrap {
-  font-size: 1.7rem;
+#technologies span {
+  font-size: 0.8rem !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  display: block !important;
+  margin-top: 0.25rem !important;
 }
 
 #mode {
   width: 8rem !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+#technologies .row:has(h3) {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+#technologies .col-12:has(h3) {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#technologies h3 {
+  height: 4rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-bottom: 1rem !important;
+  flex-shrink: 0 !important;
 }
 
 @media screen and (max-width: 600px) {
