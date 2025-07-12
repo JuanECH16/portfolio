@@ -155,11 +155,21 @@ img {
   transform: translateY(0) !important;
 }
 
+#mode {
+  width: 8rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 #about_me i,
-#projects i {
+#projects i,
+#projects svg {
   font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: inline-block;
   line-height: 1;
+  vertical-align: middle;
 }
 
 .card-body {
@@ -204,12 +214,6 @@ img {
   text-align: center !important;
   display: block !important;
   margin-top: 0.25rem !important;
-}
-
-#mode {
-  width: 8rem !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 
 #technologies .row:has(h3) {
