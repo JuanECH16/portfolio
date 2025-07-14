@@ -142,6 +142,7 @@ textarea {
 img {
   border: 0.25rem solid !important;
   border-radius: 0.5rem !important;
+  /* pointer-events: none !important; */
 }
 
 .scroll-item {
@@ -236,7 +237,7 @@ img {
   flex-shrink: 0 !important;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   html {
     scroll-padding-top: 120px !important;
   }
@@ -244,5 +245,13 @@ img {
   section {
     padding: 0 !important;
     max-width: 100% !important;
+  }
+
+  #technologies .border-end {
+    border-right: none !important;
+  }
+
+  #technologies .border-start {
+    border-left: none !important;
   }
 }
