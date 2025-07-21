@@ -28,37 +28,26 @@ body,
 .modal-content,
 .dropdown-menu,
 section,
-img,
 input,
-textarea {
+textarea,
+img {
   background-color: var(--light-bg) !important;
   color: var(--light-color) !important;
   transition: all 0.8s ease-in-out !important;
 }
 
 .dark-mode,
-.dark-mode .navbar,
-.dark-mode .card,
-.dark-mode .modal-content,
-.dark-mode .dropdown-menu,
-.dark-mode section,
-.dark-mode img,
-.dark-mode input,
-.dark-mode textarea {
+.dark-mode :is(.navbar, .card, .modal-content, .dropdown-menu, section, input, textarea, img) {
   background-color: var(--dark-bg) !important;
   color: var(--dark-color) !important;
   transition: all 0.8s ease-in-out !important;
 }
 
-.navbar .nav-link.active,
-.navbar .nav-link:focus,
-.navbar .nav-link:hover,
-.navbar .navbar-brand.active,
-.navbar .navbar-brand:focus,
-.navbar .navbar-brand:hover,
+.navbar :is(.nav-link.active, .nav-link:focus, .nav-link:hover, .navbar-brand.active, .navbar-brand:focus, .navbar-brand:hover),
 code,
 .btn,
 .card-title,
+.card-subtitle,
 h1,
 h2,
 h3,
@@ -68,21 +57,8 @@ h6 {
   color: var(--light-code) !important;
 }
 
-.dark-mode .navbar .nav-link.active,
-.dark-mode .navbar .nav-link:focus,
-.dark-mode .navbar .nav-link:hover,
-.dark-mode .navbar .navbar-brand.active,
-.dark-mode .navbar .navbar-brand:focus,
-.dark-mode .navbar .navbar-brand:hover,
-.dark-mode code,
-.dark-mode .btn,
-.dark-mode .card-title,
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6 {
+.dark-mode .navbar :is(.nav-link.active, .nav-link:focus, .nav-link:hover, .navbar-brand.active, .navbar-brand:focus, .navbar-brand:hover),
+.dark-mode :is(code, .btn, .card-title, .card-subtitle, h1, h2, h3, h4, h5, h6) {
   color: var(--dark-code) !important;
 }
 
@@ -142,7 +118,12 @@ textarea {
 img {
   border: 0.25rem solid !important;
   border-radius: 0.5rem !important;
-  /* pointer-events: none !important; */
+  pointer-events: none !important;
+  /* filter: drop-shadow(0 0 0.5rem var(--dark-bg)) !important; */
+}
+
+.dark-mode img {
+  /* filter: drop-shadow(0 0 0.5rem var(--light-bg)) !important; */
 }
 
 .scroll-item {
@@ -163,8 +144,7 @@ img {
 }
 
 #about_me i,
-#projects i,
-#projects svg {
+#projects :is(i, svg) {
   font-size: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
@@ -181,29 +161,27 @@ img {
   padding-bottom: 0.5rem !important;
 }
 
-#technologies a {
-  min-height: 100px !important;
-  height: auto !important;
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
+#technologies :is(a, i, svg) {
+  display: inline-flex !important;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
+}
+
+#technologies a {
+  min-height: 100px !important;
   font-size: 1rem !important;
+  height: auto !important;
+  width: 100% !important;
+  flex-direction: column !important;
   padding: 0.75rem 0.5rem !important;
   gap: 0.5rem !important;
 }
 
-#technologies i,
-#technologies svg {
+#technologies :is(i, svg) {
   font-size: 2.5rem !important;
   height: 2.5rem !important;
   width: 2.5rem !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
   line-height: 1 !important;
   flex-shrink: 0 !important;
   vertical-align: middle !important;
