@@ -148,7 +148,7 @@ figcaption {
   padding-right: 0 !important;
 }
 
-#education .fixed-rows {
+.fixed-rows {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   min-height: calc(1.5em * 3) !important;
@@ -163,7 +163,7 @@ figcaption {
 }
 
 /* Para textos largos que necesitan truncación */
-#education .fixed-rows.lead {
+.fixed-rows.lead {
   display: -webkit-box !important;
   -webkit-line-clamp: 3 !important;
   line-clamp: 3 !important;
