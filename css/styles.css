@@ -119,11 +119,16 @@ img {
   border: 0.25rem solid !important;
   border-radius: 0.5rem !important;
   pointer-events: none !important;
-  /* filter: drop-shadow(0 0 0.5rem var(--dark-bg)) !important; */
 }
 
-.dark-mode img {
-  /* filter: drop-shadow(0 0 0.5rem var(--light-bg)) !important; */
+figure {
+  margin: 0 !important;
+}
+
+figcaption {
+  font-size: 0.8rem !important;
+  font-style: italic !important;
+  margin-top: 0.5rem !important;
 }
 
 .scroll-item {
@@ -141,6 +146,30 @@ img {
   width: 8rem !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+#education .fixed-rows {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  min-height: calc(1.5em * 3) !important;
+  max-height: calc(1.5em * 3) !important;
+  height: calc(1.5em * 3) !important;
+
+  /* Centrado por defecto */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* Para textos largos que necesitan truncación */
+#education .fixed-rows.lead {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  align-items: stretch !important;
+  text-align: center !important;
 }
 
 #about_me i,
@@ -225,11 +254,11 @@ img {
     max-width: 100% !important;
   }
 
-  #technologies .border-end {
+  .border-end {
     border-right: none !important;
   }
 
-  #technologies .border-start {
+  .border-start {
     border-left: none !important;
   }
 }
